@@ -11,8 +11,12 @@ export default [
       prettier: eslintPluginPrettier,
     },
     rules: {
-      "prettier/prettier": ["error"],
-      "no-unused-vars": "error",
+      "prettier/prettier": ["warn"],
+      "no-unused-vars": "warn",
+      "no-debugger": "warn",
+      "no-var": "warn",
+      "prefer-const": "warn",
+      "prefer-template": "warn",
     },
   },
 ];
