@@ -1,14 +1,18 @@
-{
-  "env": {
-    "browser": true,
-    "es2021": true
+import eslintPluginPrettier from "eslint-plugin-prettier";
+
+export default [
+  {
+    files: ["**/*.js", "**/*.jsx"],
+    languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "module",
+    },
+    plugins: {
+      prettier: eslintPluginPrettier,
+    },
+    rules: {
+      "prettier/prettier": ["error"],
+      "no-unused-vars": "error",
+    },
   },
-  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  },
-  "rules": {
-    "prettier/prettier": ["error"]
-  }
-}
+];
