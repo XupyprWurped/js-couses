@@ -16,3 +16,19 @@ const renderNumbers = () => {
 };
 
 button.addEventListener("click", renderNumbers);
+
+/** Задача 6: Подсчет суммы цифр числа: */
+const numberSum = document.getElementById("number_sum");
+const buttonSum = document.getElementById("button_sum");
+const inputElement = document.getElementById("count-input_sum");
+
+const calculateSum = () => {
+  const number = inputElement.value;
+  const splitNumbers = number.split("");
+
+  const sum = splitNumbers.reduce((acc, current) => acc + Number(current), 0);
+
+  numberSum.innerHTML = injectElement(sum);
+};
+
+buttonSum.addEventListener("click", calculateSum);
